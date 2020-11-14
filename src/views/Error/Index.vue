@@ -9,7 +9,7 @@
 
       <!-- Si hay parámetros de ruta -->
       <div v-if="err.routeParams">
-        <h2>Query Params:</h2>
+        <h2>Consulta los parametros que usaste:</h2>
         <ul class="list-unstyled">
           <li v-for="(val, key) in err.routeParams" :key="key">
             👉 {{ key.toUpperCase() }}: <span class="lead text-muted">{{ val }}</span>
@@ -37,8 +37,8 @@
 
     <!-- Si NO hay error -->
     <div v-else>
-      <h1 class="my-5">Error Page</h1>
-      <p class="lead">What are you doing here? 🤔</p>
+      <h1 class="my-5">Página de error Error</h1>
+      <p class="lead">Que ha pasado aquí? 🤔</p>
     </div>
 
   </div>

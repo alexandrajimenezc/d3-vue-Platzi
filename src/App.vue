@@ -37,7 +37,7 @@ export default {
 #app
   padding 60px 0
   color #ffffff
-  background-color #15202b
+  background-color #075559
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale

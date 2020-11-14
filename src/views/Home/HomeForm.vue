@@ -11,7 +11,7 @@
             id="input-group-1"
             label="BattleTag:"
             label-for="input-text"
-            description="Format: YourProfile#1234"
+            description="Ejemplo: PollitoIngles#1234"
           >
             <b-form-input
               id="input-text"
@@ -24,7 +24,7 @@
           </b-form-group>
 
           <!-- Selector de región -->
-          <b-form-group id="input-group-3" label="Region:" label-for="input-region">
+          <b-form-group id="input-group-3" label="Región:" label-for="input-region">
             <b-form-select
               id="input-region"
               v-model="form.region"
@@ -36,7 +36,7 @@
 
           <!-- Botón envío -->
           <div class="d-flex justify-content-end mt-5">
-            <b-button type="submit" variant="primary" size="lg">Submit</b-button>
+            <b-button type="submit" variant="primary" size="lg">Buscar</b-button>
           </div>
 
         </b-form>

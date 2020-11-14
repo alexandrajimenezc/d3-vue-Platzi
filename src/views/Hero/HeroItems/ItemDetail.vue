@@ -1,6 +1,8 @@
 <template>
-  <div class="text-center bg-dark h-100 pt-3 d3-icon-item" :class="itemClassColor">
-
+  <div
+    class="text-center bg-info h-100 pt-3 d3-icon-item"
+    :class="itemClassColor"
+  >
     <div class="d-flex flex-column justify-content-between h-100">
       <template v-if="item.id">
         <div>
@@ -8,9 +10,9 @@
             <p class="text-muted">{{ item.name }}</p>
             <img
               :src="itemUrl"
-              :alt="slotName + ' ' + item.name "
+              :alt="slotName + ' ' + item.name"
               :title="attributes"
-            >
+            />
           </div>
         </div>
 
@@ -18,20 +20,22 @@
           <template v-if="itemHasGems">
             <small>{{ gemOrJewel }}:</small>
             <ul class="list-inline">
-              <li v-for="(gem, index) in item.gems" :key="'gem-'+index" class="list-inline-item">
-                <ItemDetailGem :gem="gem"/>
+              <li
+                v-for="(gem, index) in item.gems"
+                :key="'gem-' + index"
+                class="list-inline-item"
+              >
+                <ItemDetailGem :gem="gem" />
               </li>
             </ul>
           </template>
         </div>
       </template>
       <p v-else>
-        <b-badge class="text-dark"> {{slotName}} </b-badge>
+        <b-badge class="text-info"> {{ slotName }} </b-badge>
       </p>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -68,11 +72,11 @@ export default {
     },
     attributes () {
       let attributesText = 'Primary Attributes:\n'
-      this.item.attributes.primary.map((attribute) => {
+      this.item.attributes.primary.map(attribute => {
         attributesText += `${attribute}\n`
       })
       attributesText += '\nSecondary Attributes:\n'
-      this.item.attributes.secondary.map((attribute) => {
+      this.item.attributes.secondary.map(attribute => {
         attributesText += `${attribute}\n`
       })
       return attributesText
@@ -82,20 +86,20 @@ export default {
 </script>
 
 <style lang="stylus">
-  .d3-icon-item
-    min-height 100px
-    border-top-style solid
-    border-top-width 4px
-    &.item-none
-      border-color transparent
-    &.item-green
-      border-color #8bc34a
-    &.item-orange
-      border-color #ff9800
-    &.item-yellow
-      border-color #ffeb3b
-    &.item-blue
-      border-color #03a9f4
-    &.item-white
-      border-color #a0aab5
+.d3-icon-item
+  min-height 100px
+  border-top-style solid
+  border-top-width 4px
+  &.item-none
+    border-color transparent
+  &.item-green
+    border-color #8bc34a
+  &.item-orange
+    border-color #ff9800
+  &.item-yellow
+    border-color #ffeb3b
+  &.item-blue
+    border-color #03a9f4
+  &.item-white
+    border-color #a0aab5
 </style>

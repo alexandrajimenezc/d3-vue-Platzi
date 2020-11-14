@@ -2,9 +2,13 @@
   <div class="progression-bosses pt-4 mt-5 border-top">
     <h2 class="font-diablo mb-4">Progression</h2>
     <b-row>
-      <b-col v-for="(val, key) in sortedActs" :key="key" class="col-12 col-md-2">
-        <div class="bg-dark rounded mb-2">
-          <ProgressItem :act="{actNum: key, value: val}"/>
+      <b-col
+        v-for="(val, key) in sortedActs"
+        :key="key"
+        class="col-12 col-md-2"
+      >
+        <div class="bg-info rounded mb-2">
+          <ProgressItem :act="{ actNum: key, value: val }" />
         </div>
       </b-col>
     </b-row>
@@ -40,11 +44,11 @@ export default {
 </script>
 
 <style lang="stylus">
-  .progression-bosses
-    .boss-img
-      display block
-      .act
-        margin 0 auto
-        width 50px
-        height 55px
+.progression-bosses
+  .boss-img
+    display block
+    .act
+      margin 0 auto
+      width 50px
+      height 55px
 </style>

@@ -3,7 +3,7 @@
     <b-table
       hover
       striped
-      dark
+      bg-info
       :items="heroes"
       :fields="fields"
       stacked="sm"
