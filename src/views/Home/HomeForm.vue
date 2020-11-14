@@ -24,7 +24,7 @@
           </b-form-group>
 
           <!-- Selector de región -->
-          <b-form-group id="input-group-3" label="Región:" label-for="input-region">
+          <b-form-group id="input-group-3" label="Region:" label-for="input-region">
             <b-form-select
               id="input-region"
               v-model="form.region"
